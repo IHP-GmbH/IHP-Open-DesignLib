@@ -6,6 +6,9 @@ Proposed directory structure:
 .
 └── <design_name>
     ├── doc/
-    ├── data/
-    └── val/
+    │   ├── specification
+    │   ├── ...
+    ├── design_data/
+    │   └── ...
+    └── val/ <- validation/verification
 ```
