@@ -4,8 +4,8 @@ Open source designs developed with IHP 130nm BiCMOS Open Source PDK
 Proposed directory structure:
 ```
 .
-└── IHP-Open-IP/
-    ├── digital/
+└── IHP-OPEN-IP/
+    ├── <design_name>/
     │   ├── README.md                     <- list of designs, add your design here
     │   ├── OpenROAD-flow-scripts/
     │   │   ├── designs/

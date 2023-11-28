@@ -1,4 +1,4 @@
-export DESIGN_NICKNAME = riscv32i
+export DESIGN_NICKNAME = design_name
 export DESIGN_NAME = riscv
 export PLATFORM    = ihp-sg13g2
 
