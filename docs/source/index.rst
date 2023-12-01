@@ -1,13 +1,9 @@
-Welcome to Lumache's documentation!
+Welcome to IHP-Open-IP  documentation!
 ===================================
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
+**IHP-Open-IP**  is repository, which contains open source IC design using IHP SG13G2 BiCMOS processs
 
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
+Check out the :doc:`design-submission` section for the information on how to submit a new design to the repsitory. 
 
 .. note::
 
@@ -18,5 +14,5 @@ Contents
 
 .. toctree::
 
-   usage
    api
+   design-submission
