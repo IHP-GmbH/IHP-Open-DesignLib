@@ -4,6 +4,6 @@ Github based design sumbission process.
 
 
 
-.. autosummary::
+  .. autosummary::
    :toctree: generated
 
