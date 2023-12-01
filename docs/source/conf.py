@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'IHP-openIP'
+project = 'IHP-open-IP'
 copyright = '2023, IHP Open PDK'
 author = 'IHP PDK Authors'
 
