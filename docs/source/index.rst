@@ -1,5 +1,5 @@
 Welcome to IHP-Open-IP documentation!
-===================================
+====================================================
 
 **IHP-Open-IP**  is repository, which contains open source IC design using IHP SG13G2 BiCMOS processs
 
