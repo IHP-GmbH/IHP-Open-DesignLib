@@ -8,6 +8,5 @@ github based flow shown on the figure below.
 
   .. autosummary::
    :toctree: generated
-
   submission
 
