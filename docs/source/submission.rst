@@ -1,4 +1,4 @@
-Sumbission
+Submission
 ===
 
 
@@ -6,4 +6,4 @@ Sumbission
 
   .. autosummary::
    :toctree: generated
-  Submission
+  submission
