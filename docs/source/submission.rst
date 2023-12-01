@@ -1,4 +1,4 @@
-Github based design sumbission process.
+Sumbission
 ===
 
 
