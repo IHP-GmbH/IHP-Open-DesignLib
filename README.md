@@ -1,4 +1,4 @@
-# IHP-Open-IP
+# IHP-Open-DesignLib
 Open source designs developed with IHP 130nm BiCMOS Open Source PDK
 
 Proposed directory structure:
