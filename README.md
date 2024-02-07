@@ -5,10 +5,10 @@ Proposed directory structure:
 ```
 .
 └── <design_name>
+    ├── design_data/
+    │   └── ...
     ├── doc/
     │   ├── specification
     │   ├── ...
-    ├── design_data/
-    │   └── ...
     └── val/ <- validation/verification
 ```
