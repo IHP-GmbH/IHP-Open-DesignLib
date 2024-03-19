@@ -1,0 +1,100 @@
+\documentclass{article}
+\usepackage{circuitikz}
+\begin{document}
+\begin{center}
+\begin{figure}[!ht]
+\centering
+\resizebox{1\textwidth}{!}{%
+\begin{circuitikz}
+\tikzstyle{every node}=[font=\LARGE]
+\draw (-8.75,19.5) to[C] (-8.75,17);
+\draw (-5,19.5) to[C] (-5,17);
+\draw (-5,17) to[L ] (-5,14.5);
+\draw (-5,14.5) to[Tnmos] (-5,12); \draw (-4.15,13.25) to[short] (-4,13.25);
+\draw (-3.75,19.5) to[curved capacitor] (-1.25,19.5);
+\draw (0,19.5) to[curved capacitor] (0,17);
+\draw (0,17) to[L ] (0,14.5);
+\draw (0,14.5) to[Tnmos] (0,12); \draw (0.85,13.25) to[short] (1,13.25);
+\draw [](-11.25,19.5) to[short, -o] (-12.5,19.5)node[above]{$RF_{in}$};
+\draw [](-11.25,19.5) to[short] (-3.75,19.5);
+\draw (1.25,19.5) to[C] (3.75,19.5);
+\draw [](-1.25,19.5) to[short] (1.25,19.5);
+\draw (-1.25,19.5) to[short] (1.25,19.5);
+\draw (6,17) to[Tnmos] (6,22); \draw (5.15,19.5) to[short] (5,19.5);
+\draw [](3.75,19.5) to[short] (5,19.5);
+\draw (6,22) to[Tnmos] (6,25.5); \draw (5.15,23.75) to[short] (5,23.75);
+\draw (2.5,24.5) to[R] (2.5,22);
+\draw [](2.5,22) to[short] (2.5,21.25);
+\draw [](2.5,21.25) to[short] (3.75,21.25);
+\draw [](3.75,21.25) to[short] (3.75,19.5);
+\draw (3.75,19.5) to[short, -*] (3.75,19.5);
+\draw (0,19.5) to[short, -*] (0,19.5);
+\draw (-5,19.5) to[short, -*] (-5,19.5);
+\draw [](-4,13.25) to[short] (-3.75,13.25);
+\draw [](-3.75,12) to[short] (-3.75,13.25);
+\draw[] (1.25,13.25) to[short] (1,13.25);
+\draw [](1.25,13.25) to[short] (1.25,12);
+\draw [](-3.75,9.75)node[left]{$V_{tune1}$} to[short, o-] (-3.75,10.75);
+\draw [](1.25,9.75)node[left]{$V_{tune2}$} to[short, o-] (1.25,10.75);
+\draw [](-3.75,10.75) to[short] (-3.75,12);
+\draw [](1.25,10.75) to[short] (1.25,12);
+\draw (-5,12) to (-5,11.75) node[ground]{};
+\draw (0,12) to (0,11.75) node[ground]{};
+\draw (-8.75,17) to (-8.75,11.75) node[ground]{};
+\draw (3.75,19.5) to[R] (3.75,12);
+\draw (3.75,14.5) to (3.75,11.75) node[ground]{};
+\draw (6,17) to[L ] (6,14.5);
+\draw (6,14.5) to (6,11.75) node[ground]{};
+\draw [](2.5,24.5) to[short, -o] (2.5,32)node[above]{$V_{bias1}$};
+\draw (3.75,30.75) rectangle node {\LARGE auxiliary Bias} (8.75,29.25);
+\draw (5,28) to[C] (5,26);
+\draw [](6,26) to[short] (6,25.5);
+\draw [](5,28) to[short] (7,28);
+\draw (7,28) to[L ] (7,26);
+\draw [](5,26) to[short] (7,26);
+\draw [](6,29.25) to[short] (6,28);
+\draw [](6.25,30.75) to[short, -o] (6.25,32)node[above]{$VDD$};
+\draw[] (5,23.75) to[short] (4.5,23.75);
+\draw [](4.5,23.75) to[short] (4.5,29.25);
+\draw (6,25) to[C] (8.75,25);
+\draw (8.75,25) to[L ] (11.25,25);
+\draw (8.75,25) to[R] (8.75,22);
+\draw (11.25,25) to[R] (11.25,22);
+\draw (11.25,25) to[R] (11.25,28.25);
+\draw [](11.25,28.25) to[short, -o] (11.25,32)node[above]{$V_{bias2}$};
+\draw [](8.75,22) to[short] (11.25,22);
+\draw (10,22) to (10,11.75) node[ground]{};
+\draw (14,23) to[Tnmos] (14,27); \draw (13.15,25) to[short] (13,25);
+\draw [](11.25,25) to[short] (13,25);
+\draw (12.5,23.25) to[C] (12.5,20.75);
+\draw (14,23) to[L ] (14,21.25);
+\draw [](12.5,25) to[short] (12.5,23.25);
+\draw [](12.5,20.75) to[short] (14,20.75);
+\draw [](14,21.25) to[short] (14,19.5);
+\draw (10,22) to[short, -*] (10,22);
+\draw (8.75,25) to[short, -*] (8.75,25);
+\draw (11.25,25) to[short, -*] (11.25,25);
+\draw (12.5,25) to[short, -*] (12.5,25);
+\draw (14,20.75) to[short, -*] (14,20.75);
+\draw (14,19.5) to (14,11.75) node[ground]{};
+\draw (14,27) to[Tnmos] (14,29.5); \draw (13.15,28.25) to[short] (13,28.25);
+\draw (13.25,29.5) to[C] (13.25,31.25);
+\draw (14.5,29.5) to[L ] (14.5,31.25);
+\draw [](13.25,29.5) to[short] (14.5,29.5);
+\draw [](13.25,31.25) to[short] (14.5,31.25);
+\draw [](14,31.25) to[short, -o] (14,32)node[above]{$VDD$};
+\draw[] (13,28.25) to[short] (12.5,28.25);
+\draw [](12.5,28.25) to[short] (12.5,31.25);
+\draw [](12.5,31.25) to[short] (13.25,31.25);
+\draw [](14,29) to[short] (15,29);
+\draw (15,29) to[C] (17.5,29);
+\draw (17.5,29) to[R] (17.5,24.5);
+\draw (17.5,29) to[L ] (20,29);
+\draw [](20,29) to[short, -o] (21.25,29)node[above]{$RF_{out}$};
+\draw (17.5,24.5) to (17.5,11.75) node[ground]{};
+\end{circuitikz}
+}%
+\label{}
+\end{figure}
+\end{center}
+\end{document}
