@@ -1,6 +1,6 @@
 # Open Source: CMOS-LNA in SG13G2 technology
 
-### Alexander Spielberger, Christof Pfannenmüller
+### Alexander Spielberger, Christof Pfannenmüller; Institute for Electronics Engineering; Friedrich-Alexander-Universität Erlangen-Nürnberg (FAU) 
 
 In this project, a low-noise receiver amplifier was designed for a frequency range from 650 MHz to 825 MHz. The design should be usable for cellular handheld devices and support various LTE bands.
 
