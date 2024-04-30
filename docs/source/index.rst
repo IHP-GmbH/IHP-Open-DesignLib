@@ -1,10 +1,11 @@
 Welcome to IHP-Open-DesignLib documentation!
-====================================================
+###################################################
 
-**IHP-Open-DesignLib**  is repository, which contains open source IC design using IHP SG13G2 BiCMOS processs.
+**IHP-Open-DesignLib**  is repository, which contains open source IC designs using IHP SG13G2 BiCMOS processs.
 It is also a central point for design fabrication under the concept of IHP Free MPW runs funded by a public German
 project `FMD-QNC (16ME083) <https://www.elektronikforschung.de/projekte/fmd-qnc>`_. 
-
+Project funds can be used exclusively to produce chip designs for non-economic activities, such as university education, research projects, and others.
+In the project, a continuation for the provision of free area for the open source community is to be worked out.
 
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 |         Tape In date          | 10 May 2024 | 11 Nov 2024 | 22 Nov 2024 | 01 Mar 2025 | 09 May 2025 | 18 Jul 2025 | 15 Sep 2025 |
@@ -14,13 +15,52 @@ project `FMD-QNC (16ME083) <https://www.elektronikforschung.de/projekte/fmd-qnc>
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 The SG13G2 refers to the full access to the devices availables in the `IHP-Open-PDK`. 
-The SG13CMOS is an limited version of the SG13G2, which does not provide access to the HBT devices (high performance Heterojunction Bipolar Transistors) 
+The SG13CMOS is an limited version of the SG13G2, which does not provide access to the HBT devices (High Performance Heterojunction Bipolar Transistors) 
 
 
 The overview of the submission process is shown on the following figure. 
 
 .. image:: fig/subflow.png
 
+
+The submission process contains a few steps, where some of them are mandatory and crucial:  
+
+#.  Project development phase. At the beginning specifications an criteria will be defined by PDK status, later specifications from sponsors might be possible
+#.  The community can provide designs intended for prototyping submitting a design via a pull request on an `IHP-Open-DesignLib <https://github.com/IHP-GmbH/IHP-Open-DesignLib>`_ GitHub repository 
+#.  Designs will be selected according to criteria presented below and the available space.
+#.  Selected designs will be processed at IHP pilot line facility and then delivered to the end users.    
+#.  Depending on the requirements, characterization can be done in scientific collaborations by the open community which may wish to use the designs for development and research projects.
+
+
+Criteria for selection of designs submitted by open source community:
+**************************************************************************
+Mandatory criteria for IP selection 
+============================================
+#. Completeness of IP data. The mandatory criteria is to provide design data together with open source license. 
+#. The submitted design should fulfill the DRC (Design Rule Check) criteria.
+#. The maximum area below  mm\ :sup `2` preferred (larger designs only if area is available)
+#. Potential export restrictions
+
+Additional criteria for IP selection 
+==============================================
+#. First time submission (preferred)
+#. Design should use tools supported by IHP open PDK
+#. For SG13G2 Runs designs using SiGe (preferred)
+#. Documentation quality
+#. Uniqueness, not yet seen designs (i.e. if there were no ADCs before, an ADC design would get a higher point)
+#. Area Utilization (designs that make more use of the padframe are preferred)
+
+
+Before a design can be considered for fabrication start a pull request at 
+https://github.com/IHP-GmbH/IHP-Open-DesignLib latest till TAPE OUT Day
+Europractice will check designs regarding Mandatory criteria (Completeness, DRC clean GDS, …) 
+If there are more requests than available area selection procedure will be started
+Europractice registers area and upload selected GDS files
+Top cell names need to start with FMD_QNC
+Designs will be processed by IHP
+IHP can rent samples for joint evaluation
+An agreement need to be signed
+Evaluation results need to be published under https://github.com/IHP-GmbH/IHP-Open-DesignLib
 
 
 Check out the :doc:`submission` section for the information on how to submit a new design to the repsitory. 
