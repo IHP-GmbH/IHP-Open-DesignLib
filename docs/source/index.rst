@@ -51,17 +51,6 @@ Additional criteria for IP selection
 #. Area Utilization (designs that make more use of the padframe are preferred)
 
 
-Before a design can be considered for fabrication start a pull request at 
-https://github.com/IHP-GmbH/IHP-Open-DesignLib latest till TAPE OUT Day
-Europractice will check designs regarding Mandatory criteria (Completeness, DRC clean GDS, …) 
-If there are more requests than available area selection procedure will be started
-Europractice registers area and upload selected GDS files
-Top cell names need to start with FMD_QNC
-Designs will be processed by IHP
-IHP can rent samples for joint evaluation
-An agreement need to be signed
-Evaluation results need to be published under https://github.com/IHP-GmbH/IHP-Open-DesignLib
-
 
 Check out the :doc:`submission` section for the information on how to submit a new design to the repsitory. 
 
