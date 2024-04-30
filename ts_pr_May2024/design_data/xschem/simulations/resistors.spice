@@ -1,0 +1,17 @@
+** sch_path: /home/herman/github/KrzysztofHerman/IHP-Open-DesignLib/ts_pr_May2024/design_data/xschem/resistors.sch
+**.subckt resistors rppd_p ntap1_p rhigh_p ptap1_p rsil_p ptap1_n rhigh_n rppd_n rsil_n ntap1_n
+*.iopin ntap1_p
+*.iopin ptap1_p
+*.iopin rsil_p
+*.iopin rppd_p
+*.iopin rhigh_p
+*.iopin ntap1_n
+*.iopin ptap1_n
+*.iopin rsil_n
+*.iopin rppd_n
+*.iopin rhigh_n
+.SUBCKT resistors
+Ra2 rppd_n rppd_p rppd w=0.5e-6 l=2.5e-6 m=1 b=0
+Ra3 rhigh_n rhigh_p rhigh w=0.5e-6 l=2.0e-6 m=1 b=0
+Ra1 rsil_n rsil_p rsil w=0.5e-5 l=0.5e-5 m=1 b=0
+.ends
