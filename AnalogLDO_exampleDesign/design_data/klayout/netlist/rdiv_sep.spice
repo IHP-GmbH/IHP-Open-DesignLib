@@ -1,0 +1,21 @@
+** sch_path: /home/ac3e/Documents/ihp_design/klayout/netlist/rdiv_sep.sch
+.subckt rdiv_sep vout vss in_p
+*.PININFO vout:B vss:B in_p:B
+R1 net1 vout rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R4 net1 net2 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R5 net3 net2 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R6 net3 in_p rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R2 net4 in_p rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R3 net4 net5 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R7 net6 net5 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R8 net6 net7 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R9 net14 net7 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R10 net14 net8 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R11 net9 net8 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R12 net9 net10 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R13 net11 net10 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R14 net11 net12 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R15 net13 net12 rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+R16 net13 vss rhigh w=0.5e-6 l=2.5e-6 m=1 b=0
+.ends
+.end
