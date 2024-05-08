@@ -11,12 +11,11 @@ In the project, a continuation for the provision of free area for the open sourc
 |         Tape In date          | 10 May 2024 | 11 Nov 2024 | 22 Nov 2024 | 01 Mar 2025 | 09 May 2025 | 18 Jul 2025 | 15 Sep 2025 |
 +===============================+=============+=============+=============+=============+=============+=============+=============+
 |          Technology           |   SG13G2    |  SG13CMOS   |   SG13G2    |   SG13G2    |   SG13G2    |   SG13G2    |  SG13CMOS   |
-| Area available [mm\ :sup `2`] |     10      |     220     |     20      |     140     |     30      |     30      |     220     |
+| Area available [mm\ :sup:`2`] |     10      |     220     |     20      |     140     |     30      |     30      |     220     |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 The SG13G2 refers to the full access to the devices availables in the `IHP-Open-PDK`. 
 The SG13CMOS is an limited version of the SG13G2, which does not provide access to the HBT devices (High Performance Heterojunction Bipolar Transistors) 
-
 
 The overview of the submission process is shown on the following figure. 
 
@@ -27,8 +26,13 @@ The submission process contains a few steps, where some of them are mandatory an
 
 #.  Project development phase. At the beginning specifications an criteria will be defined by PDK status, later specifications from sponsors might be possible
 #.  The community can provide designs intended for prototyping submitting a design via a pull request on an `IHP-Open-DesignLib <https://github.com/IHP-GmbH/IHP-Open-DesignLib>`_ GitHub repository 
-#.  Designs will be selected according to criteria presented below and the available space.
-#.  Selected designs will be processed at IHP pilot line facility and then delivered to the end users.    
+#.  Once submitted a series of rejection test will be triggered checking for the completeness and correctness of the design. Usually this process takes a few hours. If the tests report errors the 
+    user will get notification in order to fix and resubmit the design. 
+#.  All designs, which have passed tests will be submitted for a selection process according to criteria presented below. 
+#.  The time window for Evaluation & selection will be around 10 days (it may differ between different shuttles). 
+#.  Selected designs will be processed at IHP pilot line facility and then stored in IHP Open Source Sample House. This process takes around 4 months. 
+#.  The designer or vitually anyone can rent the sample for joint evaluation for a limited amount of time. The terms and conditions of this procedure are described in this :download:`document <doc/samples.rtf>`
+#.  The period of joint evaluation by one person/group is limited to 2 years. The results obtained during this period should be uploaded to the respective repository under `IHP-Open-DesignLib <https://github.com/IHP-GmbH/IHP-Open-DesignLib>`_ GitHub repository.
 #.  Depending on the requirements, characterization can be done in scientific collaborations by the open community which may wish to use the designs for development and research projects.
 
 
@@ -38,7 +42,7 @@ Mandatory criteria for IP selection
 ============================================
 #. Completeness of IP data. The mandatory criteria is to provide design data together with open source license. 
 #. The submitted design should fulfill the DRC (Design Rule Check) criteria.
-#. The maximum area below  mm\ :sup `2` preferred (larger designs only if area is available)
+#. The maximum area below  2 mm\ :sup:`2` preferred (larger designs only if area is available)
 #. Potential export restrictions
 
 Additional criteria for IP selection 

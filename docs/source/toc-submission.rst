@@ -1,7 +1,8 @@
   .. toctree::
-    :caption: Submission guidelines
-    :maxdepth: 1
+    :caption: DesignLib documentation 
+    :maxdepth: 2
 
     submission
     files
+    orfs
 
