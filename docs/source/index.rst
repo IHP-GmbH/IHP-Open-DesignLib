@@ -29,9 +29,9 @@ The submission process contains a few steps, where some of them are mandatory an
 #.  Once submitted a series of rejection test will be triggered checking for the completeness and correctness of the design. Usually this process takes a few hours. If the tests report errors the 
     user will get notification in order to fix and resubmit the design. 
 #.  All designs, which have passed tests will be submitted for a selection process according to criteria presented below. 
-#.  The time window for Evaluation & selection will be around 10 days (it may differ between different shuttles). 
-#.  Selected designs will be processed at IHP pilot line facility and then stored in IHP Open Source Sample House. This process takes around 4 months. 
-#.  The designer or vitually anyone can rent the sample for joint evaluation for a limited amount of time. The terms and conditions of this procedure are described in this :download:`document <doc/samples.rtf>`
+#.  The time window for evaluation & selection will be around 10 days (it may differ between different shuttles). 
+#.  Selected designs will be processed at IHP pilot line facility (clean room). This process takes around 4  to 6 months depending on the technology. 
+#.  IHP, as the owner of the samples, will store it in IHP-OpenSource-SampleHouse. In order to promote sustentability and transparency of the results the designer or vitually anyone can rent the sample for joint evaluation for a limited amount of time. The terms and conditions of this procedure are described in this :download:`document <doc/samples.rtf>`
 #.  The period of joint evaluation by one person/group is limited to 2 years. The results obtained during this period should be uploaded to the respective repository under `IHP-Open-DesignLib <https://github.com/IHP-GmbH/IHP-Open-DesignLib>`_ GitHub repository.
 #.  Depending on the requirements, characterization can be done in scientific collaborations by the open community which may wish to use the designs for development and research projects.
 
