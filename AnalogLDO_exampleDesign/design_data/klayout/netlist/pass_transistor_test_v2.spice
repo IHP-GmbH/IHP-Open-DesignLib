@@ -1,0 +1,6 @@
+** sch_path: /home/ac3e/Documents/ihp_design/klayout/netlist/pass_transistor_test_v2.sch
+.subckt pass_transistor_test_v2 vout vdd vota_out vad
+*.PININFO vout:B vdd:B vota_out:B vad:B
+M1 vout vota_out vdd 1 sg13_lv_pmos W=8000u L=0.5u ng=1 m=1
+.ends
+.end

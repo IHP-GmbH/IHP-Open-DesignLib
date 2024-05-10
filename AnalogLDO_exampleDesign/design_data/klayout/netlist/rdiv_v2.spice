@@ -1,0 +1,6 @@
+** sch_path: /home/ac3e/Documents/ihp_design/klayout/netlist/rdiv_v2.sch
+.subckt rdiv_v2 in_p vout
+*.PININFO in_p:B vout:B
+R1 in_p vout rhigh w=0.5e-6 l=10e-6 m=1 b=0
+.ends
+.end
