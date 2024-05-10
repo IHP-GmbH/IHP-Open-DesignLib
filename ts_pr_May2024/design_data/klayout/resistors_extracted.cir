@@ -1,0 +1,5 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 25/04/2024 17:40
+
+* cell resistors
+.SUBCKT resistors
+.ENDS resistors

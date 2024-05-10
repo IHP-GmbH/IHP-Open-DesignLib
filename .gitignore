@@ -1,0 +1,6 @@
+
+# Sphinx documentation
+docs/_build/
+docs/build/
+
+# End of https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks
