@@ -1,17 +1,5 @@
-Submission
-============
-
-
-Before a design can be considered for fabrication start a pull request at 
-https://github.com/IHP-GmbH/IHP-Open-DesignLib latest till TAPE OUT Day
-Europractice will check designs regarding Mandatory criteria (Completeness, DRC clean GDS, …) 
-If there are more requests than available area selection procedure will be started
-Europractice registers area and upload selected GDS files
-Top cell names need to start with FMD_QNC
-Designs will be processed by IHP
-IHP can rent samples for joint evaluation
-An agreement need to be signed
-Evaluation results need to be published under https://github.com/IHP-GmbH/IHP-Open-DesignLib
+Submission process using github pull requests
+=============================================
 
 Since the **IHP-Open-DesignLib** respository is hosted on github, in order to submit a new design one should follow the typical
 github based flow shown on the figure below.
