@@ -1,0 +1,7 @@
+** sch_path: /home/herman/github/KrzysztofHerman/IHP-Open-DesignLib/ts_pr_May2024/design_data/xschem/transmission_gate_v1.sch
+**.subckt transmission_gate_v1 inout_1 inout_2 en
+*.iopin inout_1
+*.iopin inout_2
+*.ipin en
+**.ends
+.end
