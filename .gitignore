@@ -3,4 +3,6 @@
 docs/_build/
 docs/build/
 
+*.raw
+*.cir
 # End of https://www.toptal.com/developers/gitignore/api/python,jupyternotebooks

@@ -93,10 +93,12 @@ N 210 -90 260 -90 {
 lab=V_out}
 N 310 -90 310 -70 {
 lab=V_out}
-C {devices/code_shown.sym} -310 180 0 0 {name=MODEL only_toplevel=true
+C {devices/code_shown.sym} -400 -760 0 0 {name=MODEL only_toplevel=true
 format="tcleval( @value )"
 value="
 .lib $::SG13G2_MODELS/cornerMOSlv.lib mos_tt\\
+.lib $::SG13G2_MODELS/cornerRES.lib res_typ\\
+.include $::SG13G2_MODELS/diodes.lib \\
 .include $::PDK_ROOT/ihp-sg13g2/libs.ref/sg13g2_stdcell/spice/sg13g2_stdcell.spice
 "}
 C {devices/code_shown.sym} -270 -550 0 0 {name=NGSPICE only_toplevel=true 
@@ -105,7 +107,7 @@ value="
 .control
 pre_osdi ./psp103_nqs.osdi
 save all 
-tran 1p 120n
+tran 100p 120n
 write tran_res_temp.raw
 .endc
 "}
@@ -117,7 +119,6 @@ tclcommand="xschem raw_read $netlist_dir/tran_res_temp.raw tran"
 }
 C {devices/gnd.sym} 60 0 0 0 {name=l2 lab=GND}
 C {devices/ammeter.sym} 60 -230 0 0 {name=Vp}
-C {transmission_gate_v1.sym} 60 -90 0 0 {name=x1}
 C {devices/gnd.sym} -250 -200 0 0 {name=l1 lab=GND}
 C {devices/vsource.sym} -250 -60 0 0 {name=Vin value="dc=0 ac=1 sin(0, 200m, 20meg, 0, 0)"}
 C {devices/vsource.sym} -150 30 0 0 {name=Ven value="pulse(0 1.2 0 1p 1p 50n 100n)"}
@@ -132,3 +133,4 @@ value=10p
 footprint=1206
 device="ceramic capacitor"}
 C {devices/gnd.sym} 310 -10 0 0 {name=l6 lab=GND}
+C {tgate.sym} 60 -90 0 0 {name=x1}
