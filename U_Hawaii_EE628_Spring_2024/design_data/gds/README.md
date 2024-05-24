@@ -1,9 +1,6 @@
 # Design data status summary
 
 * Near-final layout in `gds` folder
-  * Updated seal ring  
-  * Simplified a polygon that gave "non-orientable" error at IHP
   * LVS clean
-  * DRC clean using `sg13g2-minimal` rule deck
-  * DRC using `sg-13g2-maximal` reveals many errors. Need to assess which ones can potentially be waived.
-    * Off-grid errors, via enclosure errors, ...  
+  * DRC `sg-13g2-maximal` shows grid errors. Some of the contained cells are laid out on a 1nm grid (instead of the 5nm expected by the DRC).
+  * Fill and seal ring not included in the current file.
