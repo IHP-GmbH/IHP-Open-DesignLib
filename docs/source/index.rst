@@ -4,7 +4,7 @@ Welcome to IHP-Open-DesignLib documentation!
 **IHP-Open-DesignLib**  is repository, which contains open source IC designs using IHP SG13G2 BiCMOS processs.
 It is also a central point for design fabrication under the concept of IHP Free MPW runs funded by a public German
 project `FMD-QNC (16ME083) <https://www.elektronikforschung.de/projekte/fmd-qnc>`_. 
-Project funds can be used exclusively to produce chip designs for non-economic activities, such as university education, research projects, and others.
+Project funds can be used exclusively to produce chip designs for non economic activities, such as university education, research projects, and others.
 In the project, a continuation for the provision of free area for the open source community is to be worked out.
 
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
@@ -14,13 +14,12 @@ In the project, a continuation for the provision of free area for the open sourc
 | Area available [mm\ :sup:`2`] |     10      |     220     |     20      |     140     |     30      |     30      |     220     |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
-The SG13G2 refers to the full access to the devices availables in the `IHP-Open-PDK`. 
+The SG13G2 refers to the full access to the devices available in the `IHP-Open-PDK`. 
 The SG13CMOS is an limited version of the SG13G2, which does not provide access to the HBT devices (High Performance Heterojunction Bipolar Transistors) 
 
 The overview of the submission process is shown on the following figure. 
 
-.. image:: fig/subflow.png
-
+.. image:: fig/submission_process_open_source.png
 
 The submission process contains a few steps, where some of them are mandatory and crucial:  
 
@@ -31,7 +30,7 @@ The submission process contains a few steps, where some of them are mandatory an
 #.  All designs, which have passed tests will be submitted for a selection process according to criteria presented below. 
 #.  The time window for evaluation & selection will be around 10 days (it may differ between different shuttles). 
 #.  Selected designs will be processed at IHP pilot line facility (clean room). This process takes around 4  to 6 months depending on the technology. 
-#.  IHP, as the owner of the samples, will store it in IHP-OpenSource-SampleHouse. In order to promote sustentability and transparency of the results the designer or vitually anyone can rent the sample for joint evaluation for a limited amount of time. The terms and conditions of this procedure are described in this :download:`document <doc/samples.rtf>`
+#.  IHP, as the owner of the samples, will store it in IHP-OpenSource-SampleHouse. In order to promote sustainability and transparency of the results the designer or literally anyone can rent the sample for joint evaluation for a limited amount of time. The terms and conditions of this procedure are described in this :download:`document <doc/samples.rtf>`
 #.  The period of joint evaluation by one person/group is limited to 2 years. The results obtained during this period should be uploaded to the respective repository under `IHP-Open-DesignLib <https://github.com/IHP-GmbH/IHP-Open-DesignLib>`_ GitHub repository.
 #.  Depending on the requirements, characterization can be done in scientific collaborations by the open community which may wish to use the designs for development and research projects.
 
