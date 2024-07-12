@@ -41,7 +41,7 @@ The SG13CMOS is an limited version of the SG13G2, which does not provide access 
 
 The overview of the submission process is shown on the following figure. 
 
-.. image:: fig/subflow.png
+.. image:: fig/submission_process_open_source.svg
 
 
 The submission process contains a few steps, where some of them are mandatory and crucial:  
