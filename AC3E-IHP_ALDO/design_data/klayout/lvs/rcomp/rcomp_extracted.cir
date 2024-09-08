@@ -1,0 +1,9 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 01/05/2024 14:54
+
+* cell rcomp
+* pin VMID2
+* pin Vc
+.SUBCKT rcomp VMID2 Vc
+* device instance $1 r0 *1 -3.421,0.342 res_rhigh
+R$1 VMID2 Vc res_rhigh w=0.5 l=3.5 b=0.0 ps=0.0 m=1.0
+.ENDS rcomp

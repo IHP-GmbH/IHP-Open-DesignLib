@@ -1,0 +1,120 @@
+#--------------------------------------------------------------
+# CACE circuit characterization file
+#--------------------------------------------------------------
+
+name:		pass_transistor
+description:	--
+commit:		N/A
+PDK:		ihp-sg13g2
+
+cace_format:	4.0
+
+authorship {
+	designer:	Daniel Arevalos
+	company:	IHP
+	creation_date:	January 5, 2024
+	license:	Apache 2.0
+}
+
+# Paths to various files
+
+paths {
+	root:		..
+	documentation:	doc
+	schematic:	xschem
+	magic:		mag
+	layout:		gds
+	netlist:	netlist
+	testbench:	cace
+	simulation:	ngspice
+        reports:	reports
+	plots:		plots
+	logs:		ngspice/log
+}
+
+# Project dependencies 
+
+dependencies {
+}
+
+# Pin names and descriptions
+
+pins {
+	name:		pt_s
+	description:	LDO_CL output
+	type:		signal
+	direction:	power
+	Vmin:		vss - 0.3
+	Vmax:		vdd + 0.3
+	note:		May be between 1.4 and 2
+
+ 	+
+	name:		pt_d
+	description:	LDO_CL power supply
+	type:		power
+	direction:	inout
+	Vmin:		vss - 0.3
+	Vmax:		vdd + 0.3
+
+ 	+
+	name:		pt_g
+	description:	LDO_CL Voltage reference
+	type:		signal
+	direction:	input
+	Vmin:		vss - 0.3
+	Vmax:		vdd + 0.3
+
+}
+
+# Default values for electrical parameter measurement conditions
+# if not otherwise specified
+
+default_conditions {
+	name:		temperature
+	description:	Ambient temperature
+	display:	Temp
+	unit:		{degrees}C
+	minimum:	-40
+	typical:	27
+	maximum:	130
+
+	+
+	name:		corner
+	description:	Process corner
+	display:	Corner
+	minimum:	ss
+	typical:	tt
+	maximum:	ff
+}
+
+# List of electrical parameters to be measured and their specified limits
+
+electrical_parameters {
+	name:		current
+	description:	Current draw through analog supply, amplifier enabled, no load
+	display:	current
+	unit: 		A
+	spec {
+		minimum:	any
+		typical:	1
+		maximum:	2	fail
+	}
+	simulate {
+		tool:		ngspice
+		template:	pass_transistor_current.spice
+		format:		ascii .data null result
+	}
+	conditions {
+		name: temperature
+		typical: 27
+
+		+
+		name: corner
+		typical: tt
+	}
+
+}
+
+# List of physical parameters to be measured and their specified limits
+
+

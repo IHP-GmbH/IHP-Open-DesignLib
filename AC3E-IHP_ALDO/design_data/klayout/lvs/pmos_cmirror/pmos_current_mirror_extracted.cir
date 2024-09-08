@@ -1,0 +1,12 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 26/04/2024 16:29
+
+* cell pmos_current_mirror
+* pin VMID1
+* pin VMID2
+* pin VDD
+.SUBCKT pmos_current_mirror VMID1 VMID2 VDD
+* device instance $1 r0 *1 1.307,10.065 sg13_lv_pmos
+M$1 VMID2 VMID1 VDD VDD sg13_lv_pmos W=2.0 L=1.0
+* device instance $2 r0 *1 2.687,10.065 sg13_lv_pmos
+M$2 VDD VMID1 VMID1 VDD sg13_lv_pmos W=2.0 L=1.0
+.ENDS pmos_current_mirror

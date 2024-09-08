@@ -1,0 +1,9 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 01/05/2024 19:05
+
+* cell ccomp
+* pin VC
+* pin VOUT
+.SUBCKT ccomp VC VOUT
+* device instance $1 r0 *1 -44.827,-2.039 cap_cmim
+C$1 VOUT VC cap_cmim w=45 l=45 m=1
+.ENDS ccomp

@@ -1,0 +1,420 @@
+#--------------------------------------------------------------
+# CACE circuit characterization file
+#--------------------------------------------------------------
+
+name:		TOP
+description:	--
+commit:		N/A
+PDK:		ihp-sg13g2
+
+cace_format:	4.0
+
+authorship {
+	designer:	Daniel Arevalos
+	company:	IHP
+	creation_date:	January 5, 2024
+	license:	Apache 2.0
+}
+
+# Paths to various files
+
+paths {
+	root:		..
+	documentation:	docs
+	schematic:	xschem/top
+	klayout:	klayout
+	layout:		gds
+	netlist:	netlist
+	testbench:	cace
+	simulation:	ngspice
+    	reports:	reports
+	plots:		plots
+	logs:		ngspice/log
+}
+
+# Project dependencies 
+
+dependencies {
+}
+
+# Pin names and descriptions
+
+pins {
+	name:		1
+	description:	LDO_CL output
+	type:		signal
+	direction:	output
+	Vmin:		vss - 0.3
+	Vmax:		vdd + 0.3
+	note:		May be between 1.4 and 2
+
+ 	+
+	name:		2
+	description:	LDO_CL power supply
+	type:		power
+	direction:	inout
+	Vmin:		vss - 0.3
+	Vmax:		vdd + 0.3
+
+ 	+
+	name:		3
+	description:	LDO_CL Voltage reference
+	type:		signal
+	direction:	input
+	Vmin:		vss - 0.3
+	Vmax:		vdd + 0.3
+
+ 	+
+	name:		4
+	description:	LDO_CL ibias current 
+	type:		signal
+	direction:	input
+	Vmin:		vss
+	Vmax:		vdd
+
+ 	+
+	name:		8
+	description:	Analog ground
+	type:		ground
+	direction:	inout
+	Vmin:		-0.3
+	Vmax:		0.3
+}
+
+# Default values for electrical parameter measurement conditions
+# if not otherwise specified
+
+default_conditions {
+	name:		Vvdd
+	description:	Analog power supply voltage
+	display:	vdd
+	unit:		V
+	typical:	3.3
+
+	+
+	name:		Vvss
+	description:	Analog ground
+	display:	vss
+	unit:		V
+	typical:	0
+
+	+
+	name:		Vdvdd
+	description:	Digital power supply voltage
+	display:	dvdd
+	unit:		V
+	typical:	1.8
+	note:		Reference voltage for the enable input
+
+	+
+	name:		Rout
+	description:	Output load resistance
+	display:	RLoad
+	unit:		M{ohms}
+	typical:	100
+
+	+
+	name:		Cout
+	description:	Output load capacitance
+	display:	CLoad
+	unit:		fF
+	maximum:	100
+
+	+
+	name:		ena
+	description:	Amplifier enable
+	display:	ena
+	typical:	1
+
+	+
+	name:		Vcm
+	description:	Common-mode input voltage
+	display:	Vcm
+	typical:	1.65
+
+	+
+	name:		Vdiff
+	description:	Differential input voltage
+	display:	Vdiff
+	typical:	0
+
+	+
+	name:		temperature
+	description:	Ambient temperature
+	display:	Temp
+	unit:		{degrees}C
+	minimum:	-40
+	typical:	27
+	maximum:	130
+
+	+
+	name:		corner
+	description:	Process corner
+	display:	Corner
+	minimum:	ss
+	typical:	tt
+	maximum:	ff
+
+	+
+	name:		iterations
+	description:	Iterations to run
+	display:	Iterations
+	minimum:	1
+	maximum:	10
+	step:		linear
+	stepsize:	1
+}
+
+# List of electrical parameters to be measured and their specified limits
+
+electrical_parameters {
+	name:		psrr
+	description:	Current draw through analog supply, amplifier enabled, no load
+	display:	psrr
+	unit: 		dB
+	spec {
+		minimum:	any
+		typical:	-60
+		maximum:	-50	fail
+	}
+	simulate {
+		tool:		ngspice
+		template:	TOP_ldo_cl_psrr.spice
+		format:		ascii .data null result
+	}
+	conditions {
+		name: Vvdds
+		typical: 3.3
+
+		+
+		name: Vcm
+		maximum: 3.3
+		typical: 1.65
+		minimum: 0.0
+
+		+
+		name: temperature
+		typical: 27
+
+		+
+		name: corner
+		typical: tt
+	}
+	
+	+
+	name:		linereg
+	description:	Current draw through analog supply, amplifier enabled, no load
+	display:	linereg
+	unit: 		mV/V
+	spec {
+		minimum:	any
+		typical:	1
+		maximum:	2	fail
+	}
+	simulate {
+		tool:		ngspice
+		template:	TOP_ldo_cl_linereg.spice
+		format:		ascii .data null result
+	}
+	conditions {
+		name: Vvdds
+		typical: 3.3
+
+		+
+		name: Vcm
+		maximum: 3.3
+		typical: 1.65
+		minimum: 0.0
+
+		+
+		name: temperature
+		minimum: 0
+		typical: 27
+		maximum: 100
+
+		+
+		name: corner
+		minimum: ss
+		typical: tt
+		maximum: ff
+	}
+	
+	+
+	name:		dropout
+	description:	Current draw through analog supply, amplifier enabled, no load
+	display:	dropout
+	unit: 		mV
+	spec {
+		minimum:	any
+		typical:	250
+		maximum:	350	fail
+	}
+	simulate {
+		tool:		ngspice
+		template:	TOP_ldo_cl_linereg.spice
+		format:		ascii .data null result
+	}
+	conditions {
+		name: Vvdds
+		typical: 3.3
+
+		+
+		name: Vcm
+		maximum: 3.3
+		typical: 1.65
+		minimum: 0.0
+
+		+
+		name: temperature
+		minimum: 0
+		typical: 27
+		maximum: 100
+
+		+
+		name: corner
+		minimum: ss
+		typical: tt
+		maximum: ff
+	}
+	
+	+
+	name:		loadreg
+	description:	Current draw through analog supply, amplifier enabled, no load
+	display:	loadreg
+	unit: 		mV/A
+	spec {
+		minimum:	any
+		typical:	0.1
+		maximum:	1	fail
+	}
+	simulate {
+		tool:		ngspice
+		template:	TOP_ldo_cl_loadreg.spice
+		format:		ascii .data null result
+	}
+	conditions {
+		name: Vvdds
+		typical: 3.3
+
+		+
+		name: Vcm
+		maximum: 3.3
+		typical: 1.65
+		minimum: 0.0
+
+		+
+		name: temperature
+		minimum: 0
+		typical: 27
+		maximum: 100
+
+		+
+		name: corner
+		minimum: ss
+		typical: tt
+		maximum: ff
+	}
+	
+	+
+	name:		Phase_Margin
+	description:	Current draw through analog supply, amplifier enabled, no load
+	display:	Phase_Margin
+	unit: 		{degrees}
+	spec {
+		minimum:	50	fail
+		typical:	70
+		maximum:	any	
+	}
+	simulate {
+		tool:		ngspice
+		template:	TOP_ldo_cl_openloop.spice
+		format:		ascii .data null result
+	}
+	conditions {
+		name: Vvdds
+		typical: 3.3
+
+		+
+		name: Vcm
+		maximum: 3.3
+		typical: 1.65
+		minimum: 0.0
+
+		+
+		name: temperature
+		minimum: 0
+		typical: 27
+		maximum: 100
+
+		+
+		name: corner
+		minimum: ss
+		typical: tt
+		maximum: ff
+	}
+	
+	+
+	name:		Openloop_Gain
+	description:	Current draw through analog supply, amplifier enabled, no load
+	display:	Openloop_Gain
+	unit: 		dB
+	spec {
+		minimum:	50	fail
+		typical:	70
+		maximum:	any	
+	}
+	simulate {
+		tool:		ngspice
+		template:	TOP_ldo_cl_openloop.spice
+		format:		ascii .data null result
+	}
+	conditions {
+		name: Vvdds
+		typical: 3.3
+
+		+
+		name: Vcm
+		maximum: 3.3
+		typical: 1.65
+		minimum: 0.0
+
+		+
+		name: temperature
+		minimum: 0
+		typical: 27
+		maximum: 100
+
+		+
+		name: corner
+		minimum: ss
+		typical: tt
+		maximum: ff
+	}
+
+}
+
+# List of physical parameters to be measured and their specified limits
+
+physical_parameters {
+	name: DRC_errors
+	display: DRC_errors
+	spec { 
+		maximum: 0 fail
+	}
+	evaluate {
+		tool: cace_drc_klayout
+	}
+	
+	+
+	name:		LVS_errors
+	description:	LVS errors
+	display:	LVS errors
+	spec {
+		maximum:	0	fail
+	}
+	evaluate {
+		tool:		cace_lvs_klayout
+	}
+}
+
+
