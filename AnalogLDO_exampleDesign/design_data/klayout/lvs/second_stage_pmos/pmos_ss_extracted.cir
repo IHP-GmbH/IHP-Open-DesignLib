@@ -1,0 +1,10 @@
+* Extracted by KLayout with SG13G2 LVS runset on : 30/04/2024 10:28
+
+* cell pmos_ss
+* pin VOUT
+* pin VDD
+* pin VMID2
+.SUBCKT pmos_ss VOUT VDD VMID2
+* device instance $1 r0 *1 -4.734,5.389 sg13_lv_pmos
+M$1 VDD VMID2 VOUT \$8 sg13_lv_pmos W=20.0 L=0.5
+.ENDS pmos_ss

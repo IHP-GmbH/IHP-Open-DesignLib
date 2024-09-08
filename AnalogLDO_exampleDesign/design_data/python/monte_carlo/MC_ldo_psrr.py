@@ -6,43 +6,38 @@ import pandas as pd
 import matplotlib.pyplot as plt
 # Replace 'your_file.csv' with the path to your CSV file
 
-if len(sys.argv) != 0:
-    arg = sys.argv[1]
-    fig_file_path= sys.argv[2]
-    print(f"The CSV file to read is: '{arg}' ")
-else:
-    print("No argument specified")
+def MC_ldo_psrr(file_path):
 
-file_path = arg
-# Select and keep only the first column
+    # Select and keep only the first column
 
-if os.path.exists(file_path):
-    print(f"Reading file '{file_path}'")
-    df = pd.read_csv(file_path, sep='\s+')
-else:
-    print(f"file '{file_path}' does not exists")
-# Select and keep only the first column
-# Plot the first column
-f3db= df.iloc[:,2]
+    if os.path.exists(file_path):
+        print(f"Reading file '{file_path}'")
+        df = pd.read_csv(file_path, sep='\s+')
+    else:
+        print(f"file '{file_path}' does not exists")
+    # Select and keep only the first column
+    # Plot the first column
+    f3db= df.iloc[:,2]
 
 
-inverse = np.power(10, f3db/20)
-print (20*np.log10(inverse.mean()))
-print (20*np.log10(inverse.std()))
+    inverse = np.power(10, f3db/20)
+    mean = 20*np.log10(inverse.mean())
+    std = 20*np.log10(inverse.std())
 
-no_bins = 50
-plt.hist(f3db,bins=no_bins)
-plt.xlabel('frequency [MHz]')
-plt.title('PSRR frequency statistical distribution')
+    no_bins = 50
+    plt.hist(f3db,bins=no_bins)
+    plt.xlabel('psrr (dB)')
+    plt.title('PSRR frequency statistical distribution')
+    plt.annotate(f"Mean: {mean}\n Std:  {std}", (-110,70))
 
-print("---------------------------------------" )
-print(f"Mean value of PSRR: {f3db.mean()}" )
-print(f"Std dev of PSRR:  {f3db.std()}" )
-print("---------------------------------------" )
+    print("---------------------------------------" )
+    print(f"Mean value of PSRR: {mean}" )
+    print(f"Std dev of PSRR:  {std}" )
+    print("---------------------------------------" )
 
-# Show the plot
-basename = os.path.basename(file_path)
-fig_file_name= fig_file_path
-print(fig_file_name)
-plt.savefig(fig_file_name,dpi=600)
-plt.show()
+    # Show the plot
+    #basename = os.path.basename(file_path)
+    #fig_file_name= fig_file_path
+    #print(fig_file_name)
+    #plt.savefig(fig_file_name,dpi=600)
+    #plt.show()
