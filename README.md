@@ -4,13 +4,12 @@ Open source designs developed with IHP 130nm BiCMOS Open Source PDK
 ReadTheDocs documentation for IHP-Open-DesignLib is [here](https://ihp-open-ip.readthedocs.io/en/latest/)
 
 Proposed directory structure:
-```
-.
-└── <design_name>
-    ├── design_data/
-    │   └── ...
-    ├── doc/
-    │   ├── specification
-    │   ├── ...
-    └── val/ <- validation/verification
-```
+```text
+📁<design_name>
+ ┣ 📁design_data
+ ┃ ┗ ...
+ ┣ 📁doc
+ ┃ ┣ 📜specification
+ ┃ ┣ ...
+ ┗ 📁val <- validation/verification
+ ```
