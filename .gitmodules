@@ -7,3 +7,6 @@
 [submodule "Tapeout_2024/Nov"]
 	path = Tapeout_2024/Nov
 	url = ../TO_Nov2024.git
+[submodule "Tapeout_2025/Apr"]
+	path = Tapeout_2025/Apr
+	url = ../TO_Apr2025.git
