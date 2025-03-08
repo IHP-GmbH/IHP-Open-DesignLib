@@ -1,7 +1,0 @@
-** sch_path: /home/ac3e/Documents/ihp_design/klayout/netlist/rdiv_notsep.sch
-.subckt rdiv_testcase_lvspass vss in_p vout
-*.PININFO vss:B in_p:B vout:B
-R2 vss in_p res_rhigh w=0.5e-6 l=30e-6 m=1 b=0
-R1 in_p vout res_rhigh w=0.5e-6 l=10e-6 m=1 b=0
-.ends
-.end
