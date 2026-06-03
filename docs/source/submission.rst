@@ -1,15 +1,18 @@
 Submission process using github pull requests
 =============================================
 
-Since the **IHP-Open-DesignLib** respository is hosted on github, in order to submit a new design one should follow the typical
-github based flow shown on the figure below.
+The submission process takes place on the GitHub platform. Each OpenMPW run has a dedicated repository, named with the prefix **TO_"** 
+followed by a suffix indicating the month and year of the tape-out.
+
+
+In order to submit a new design you should follow the typical github based flow shown on the figure below.
 
 .. image:: fig/gitflow.png
 
-1. Forking the **IHP-Open-DesignLib** repository
+1. Forking the example **TO_Apr2025** repository
 
-Go to the **IHP-Open-DesignLib** repository. You can do this by searching for the repository or by directly entering the URL in your browser.
-https://github.com/IHP-GmbH/IHP-Open-DesignLib
+Go to the **TO_Apr2025** repository. You can do this by searching for the repository or by directly entering the URL in your browser.
+https://github.com/IHP-GmbH/TO_Apr2025
 On the top-right corner of the repository page, you will see a ``Fork`` button. Click on this button.
 
 .. image:: fig/fork.png
@@ -19,7 +22,7 @@ After this step a confirmation window should appear, where you should press ``Cr
 .. image:: fig/fork2.png
 
 
-2. Clone the forked Repository:
+2. Clone the forked repository:
 
 Now that you have your own copy of the repository, you might want to work on it locally, on your own PC. To do this, click on the green ``Code`` button and copy the HTTPS or SSH URL.
 Then in your terminal line write 
@@ -29,11 +32,13 @@ Then in your terminal line write
 
 .. code-block:: console
 
-  git clone https://github.com/IHP-GmbH/IHP-Open-DesignLib.git
+  git clone https://github.com/IHP-GmbH/TO_Apr2025.git
 
-The repository will be downloaded to the ``IHP-Open-DesignLib`` directory where you can step in using ``cd IHP-Open-DesignLib``.
+The repository will be downloaded to the ``TO_Apr2025`` directory where you can step in using ``cd TO_Apr2025``.
 
-To see which files have been modified, added, or deleted, run:
+Now you are ready to do your own development following the instructions provided in the README file. 
+
+Any time you want to see which files have been modified, added, or deleted, run:
 
 
 .. code-block:: console
