@@ -1,0 +1,24 @@
+[submodule "Tapeout_2023/Dec"]
+	path = Tapeout_2023/Dec
+	url = ../TO_Dec2023.git
+[submodule "Tapeout_2024/May"]
+	path = Tapeout_2024/May
+	url = ../TO_May2024.git
+[submodule "Tapeout_2024/Nov"]
+	path = Tapeout_2024/Nov
+	url = ../TO_Nov2024.git
+[submodule "Tapeout_2025/Apr"]
+	path = Tapeout_2025/Apr
+	url = ../TO_Apr2025.git
+[submodule "Tapeout_2024/Dec"]
+	path = Tapeout_2024/Dec
+	url = ../TO_Dec2024.git
+[submodule "Tapeout_2025/Jul"]
+	path = Tapeout_2025/Jul
+	url = ../TO_July2025.git
+[submodule "Tapeout_2025/May"]
+	path = Tapeout_2025/May
+	url = ../TO_May2025.git
+[submodule "Tapeout_2025/Sep"]
+	path = Tapeout_2025/Sep
+	url = ../TO_Sep2025.git
