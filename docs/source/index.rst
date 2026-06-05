@@ -7,12 +7,34 @@ project `FMD-QNC (16ME083) <https://www.elektronikforschung.de/projekte/fmd-qnc>
 Project funds can be used exclusively to produce chip designs for non-commercial activities, such as university education, research projects, and others.
 In the project, a continuation for the provision of free area for the open source community is to be worked out.
 
-+-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+
-|         Tape In date          | 10 May 2024 | 11 Nov 2024 | 22 Nov 2024 | 07 Apr 2025 | 09 May 2025 | 18 Jul 2025 | 14 Sep 2025* |
-+===============================+=============+=============+=============+=============+=============+=============+==============+
-|          Technology           |   SG13G2    |  SG13CMOS   |   SG13G2    |   SG13G2    |   SG13G2    |   SG13G2    |  SG13CMOS    |
-| Area available [mm\ :sup:`2`] |     10      |     220     |     20      |     140     |     30      |     30      |     220      |
-+-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+--------------+
+.. list-table::
+   :header-rows: 1
+   :align: center
+
+   * - Tape In date
+     - 10 May 2024
+     - 11 Nov 2024
+     - 22 Nov 2024
+     - 01 Mar 2025
+     - 09 May 2025
+     - 18 Jul 2025
+     - 15 Sep 2025
+   * - Technology
+     - SG13G2
+     - SG13CMOS
+     - SG13G2
+     - SG13G2
+     - SG13G2
+     - SG13G2
+     - SG13CMOS
+   * - Area available [mm\ :sup:`2`]
+     - 10
+     - 220
+     - 20
+     - 140
+     - 30
+     - 30
+     - 220
 
 .. caution::
 
@@ -24,7 +46,8 @@ The SG13CMOS is an limited version of the SG13G2, which does not provide access 
 
 The overview of the submission process is shown on the following figure. 
 
-.. image:: fig/submission_process_open_source.png
+.. image:: fig/submission_process_open_source.svg
+
 
 The submission process contains a few steps, where some of them are mandatory and crucial:  
 

@@ -2,7 +2,7 @@
 
 # -- Project information
 
-project = 'IHP-open-DesignLib'
+project = 'IHP-Open-DesignLib'
 copyright = '2024, IHP Open PDK'
 author = 'IHP PDK Authors'
 
