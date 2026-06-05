@@ -15,10 +15,10 @@ In the project, a continuation for the provision of free area for the open sourc
      - 10 May 2024
      - 11 Nov 2024
      - 22 Nov 2024
-     - 01 Mar 2025
+     - 07 Apr 2025
      - 09 May 2025
      - 18 Jul 2025
-     - 15 Sep 2025
+     - 14 Sep 2025*
    * - Technology
      - SG13G2
      - SG13CMOS
@@ -93,7 +93,3 @@ Check out the :doc:`submission` section for the information on how to submit a n
 .. include:: toc-submission.rst
 
 .. include:: ../../riscv32i/toc-riscv32i.rst
-
-
-Contents
---------
