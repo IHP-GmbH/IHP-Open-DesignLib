@@ -1,7 +1,7 @@
-# IHP-Open-DesignLib
-Open source designs developed with IHP 130nm BiCMOS Open Source PDK
+# IHP-Open-FMD_QNC-Tapeouts
+Open source designs developed with IHP 130nm BiCMOS Open Source PDK in the FMD_QNC project.
 
-ReadTheDocs documentation for IHP-Open-DesignLib is [here](https://ihp-open-designlib.readthedocs.io/en/latest/)
+ReadTheDocs documentation for IHP-Open-FMD_QNC-Tapeouts is [here](https://ihp-open-designlib.readthedocs.io/en/latest/)
 
 Directory structure:
 ```text
